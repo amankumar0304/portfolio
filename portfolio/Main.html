@@ -33,7 +33,7 @@
        top: 0;
        left: 0;
        z-index: 9997;
-       width: 250px;
+       width: 300px;
        height: 100%;
        contain:strict;       
        transition: 0.5s;
@@ -79,19 +79,26 @@
    nav li a{
        text-decoration: none;
        color: #47525c;
+       padding: 10px;
+       transition: 0.3s ease-in;
+       border-left: 2px solid #222;
     }
    nav li i{
        color:#0275d8;
+
    }
 
    nav li a:hover{
        color:White;
+       border-left: 10px solid #222;
+       
        text-decoration: none;
    }
    .Logos{
     text-align: center;
-    word-spacing: 5px;
+    word-spacing: 4px;
     margin-top: -5%;
+    
     }
     .Logos a{
         text-align: center;
@@ -99,6 +106,7 @@
         color:white;
         border: 1px;
         border-radius: 50%;
+        transition: .2s ease-in;
         background-color: #2c2f3f;
     } 
     .Logos i{
@@ -107,23 +115,30 @@
     }
     .Logos a:hover{
         background-color:#0275d8 ;
-      
     }
     #main{
-     margin-left: 250px;
+     margin-left: 300px;
     }
     .hero_1
    {   font-weight: bold;
-       
-       color: white;
-       margin-left: 35%;
+       text-align: center;
+       color: #777;
+       margin-left: 22.44%;
        z-index: 1;
 
        position: relative;
     }
     .hero_1 h1{
+      text-align: center;
         font-weight: bold;
         font-size: 80px;
+        transition: 0.5s ease;
+
+    }
+    .hero_1 h1:hover{
+      color:#fff;
+      text-shadow: 0 0 10px #fff,
+      0 0 20px #fff,0 0 40px #fff,0 0 80px #fff,0 0 120px #fff,0 0 160px #fff;
     }
     p{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -137,14 +152,14 @@
         align-items: center;
         bottom: 0;
         top: 0;
+        text-align: center;
         margin-top: -25px;
         bottom: 0;
         left: 0;
         right: 0;
         content: "";
         z-index: 1;
-        background-image: url("https://i.imgur.com/M5Zzuwp.jpg");
-        background-color: turquoise;
+        background-image: url("background.jpg");
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -258,12 +273,12 @@
     }
  
 #main {
-  margin-left: 250px;
+  margin-left: 300px;
 }
 
 @media (max-width: 1199px) {
   #header {
-    left: -250px;
+    left: -300px;
   }
   #main {
     margin-left: 0;
@@ -280,9 +295,9 @@ label #btn,label #cancel{
 }
 label #btn{
   z-index: 1111;
-  left:20px;
-  top:50px;
-  font-size: 25px;
+  left:8px;
+  top:25px;
+  font-size: 30px;
   color:#0275d8;
   transition: all .5s;
   padding:10px;
@@ -293,13 +308,14 @@ label #cancel{
   padding:10px;
   left:-20%;
   top:10px;
+  
   color:#0275d8;
   font-size: 25px;
   transition: all .5s ;
 }
 #check:checked ~ #header{
   left:0;
-  width: 40%;
+  width: 50%;
 }
 #check:checked ~ label #btn{
   left:20%;
@@ -309,13 +325,13 @@ label #cancel{
 }
 
 #check:checked ~ label #cancel{
-  left:40%;
+  left:55%;
 
 }
 .blinking-cursor {
   font-weight: 100;
   font-size: 30px;
-  color: white;
+  color: #666;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -323,6 +339,14 @@ label #cancel{
   animation: 1s blink step-end infinite;
 }
 
+.copyright{
+  text-align: right;
+ font-size: 14px;
+  margin:5%;
+  margin-top: 30%;
+  font-family: monospace;
+  bottom: 0;
+}
 
 
 @-webkit-keyframes "blink" {
@@ -330,7 +354,7 @@ label #cancel{
     color: transparent;
   }
   50% {
-    color: white;
+    color: #666;
   }
 }
 
@@ -353,16 +377,16 @@ label #cancel{
         <div class="profile">
             <img id="profile_pic" src="profile.jpeg">
             <h3>Aman Kr.</h3>
+            
             <div class="links">
                 
             </div>
         </div>
         <div class="Logos">
             
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/aman-kumar-725b9b184"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/people/Aman-Kr/100007892146576"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/Aman15415899"><i class="fab fa-twitter"></i></a>
         </div>
             
         <nav class="navigation">
@@ -375,14 +399,19 @@ label #cancel{
                 <a href="#contact"><i class="far fa-envelope"></i>Contact</a></li>
               </ul>
         </nav>
+        <div class="copyright">
+          <p><i class="fas fa-copyright text-primary"></i> Copyright<br>Designed by Aman<br>
+          refernce-bootstrap</p>
+        </div>
 
      </header>
      
     <section class="hero" id="home">
-    <div class="hero_1" style="opacity: 40%;">
+    <div class="hero_1"">
       
-      <h3>I'm Developer & Student <span class="blinking-cursor">|</span></h3>  
+      <h4>I'm Developer & Student <span class="blinking-cursor">|</span></h4>  
       <h1>Aman Kumar</h1>
+      
         
     </div>
     </section>
@@ -525,11 +554,10 @@ label #cancel{
           <div class="card-footer">
             <div class="logos_contact" style="text-align: center;">
             
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              
-              <a href="#"><i class="fab fa-google-plus-g"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.facebook.com/people/Aman-Kr/100007892146576"><i class="fab fa-facebook"></i></a>
+              <a href="https://twitter.com/Aman15415899"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/aman-kumar-725b9b184"><i class="fab fa-linkedin-in"></i></a>
+
           </div>
           </div>
     </div>
@@ -549,3 +577,5 @@ label #cancel{
     </script>
 </body>
 </html>
+
+
